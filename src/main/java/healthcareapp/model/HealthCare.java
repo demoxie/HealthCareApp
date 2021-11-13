@@ -14,10 +14,8 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Doctor {
-    @Id
+public class HealthCare {
+    @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    private String firstName;
-    private String lastName;
 }
