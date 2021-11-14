@@ -7,13 +7,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Setter
 @Getter
-@Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-@Table(name ="Person")
+@MappedSuperclass
 public class Person {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

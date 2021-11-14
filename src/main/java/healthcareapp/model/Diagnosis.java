@@ -20,6 +20,8 @@ public class Diagnosis {
     private String diagnosisDetails;
     private String diseases;
     @ManyToOne
+    private MedicalPersonnel medicalPersonnel;
+    @ManyToOne
     private Patient patient;
 
 }
