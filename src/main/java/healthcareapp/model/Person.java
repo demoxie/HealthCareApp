@@ -1,5 +1,6 @@
 package healthcareapp.model;
 
+import healthcareapp.enums.AccountStatus;
 import healthcareapp.enums.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,6 +27,8 @@ public class Person {
     private String officePhone;
     private String email;
     private String password;
+    private AccountStatus accountStatus;
+    private String dateJoined;
     
     
     

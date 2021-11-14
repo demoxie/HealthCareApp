@@ -16,6 +16,7 @@ import java.util.List;
 @Table(name ="Patient")
 public class Patient extends Person{
     @OneToMany
-    private List<Symptom> symptoms;
+    private List<Diagnosis> diagnosis;
+
 
 }
