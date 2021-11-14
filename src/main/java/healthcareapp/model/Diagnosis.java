@@ -6,20 +6,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Disease {
+public class Diagnosis {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long diseaseId;
-    private String name;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
+    private Long id;
+    private String diagnosisDetails;
+    private String diseases;
     @ManyToOne
-    private DiseaseCategory category;
-    @OneToMany
-    private Set<Symptoms> symptoms;
+    private Patient patient;
 
 }
