@@ -1,4 +1,4 @@
 package healthcareapp.controller;
 
-public class DoctorController {
+public class MedicController {
 }
