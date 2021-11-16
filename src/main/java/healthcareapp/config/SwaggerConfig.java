@@ -1,6 +1,7 @@
 package healthcareapp.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiKey;
@@ -12,7 +13,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 import java.util.Arrays;
 import java.util.List;
-
+@Configuration
 public class SwaggerConfig {
     private ApiKey apiKey() {
         return new ApiKey("JWT", "Authorization", "header");
@@ -33,7 +34,7 @@ public class SwaggerConfig {
                 .securityContexts(Arrays.asList(securityContext()))
                 .securitySchemes(Arrays.asList(apiKey()))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.healthcareapp"))
+                .apis(RequestHandlerSelectors.basePackage("healthcareapp"))
                 .paths(PathSelectors.any())
                 .build();
     }
