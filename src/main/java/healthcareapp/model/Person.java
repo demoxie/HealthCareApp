@@ -2,16 +2,15 @@ package healthcareapp.model;
 
 import healthcareapp.enums.AccountStatus;
 import healthcareapp.enums.Gender;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Setter
 @Getter
-@MappedSuperclass
+//@MappedSuperclass
+@Entity
 public class Person {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -29,6 +28,7 @@ public class Person {
     private String password;
     private AccountStatus accountStatus;
     private String dateJoined;
+    private boolean isEnabled;
     
     
     
